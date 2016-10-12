@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="4b5ef45e7fdea59d1e5b0fd555e947d286259b6c">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_235e5009e536c7e5e93481ee6035ac562713a792.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_6996eaed4708edcce945b99bbe3fbf5f92ffb7c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_4ce25a4c1f9715531dcf9a5847227e77a202209e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-design-24.2.1_577fb5b9cac84e7da19b8a97c893bbc13126d105.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_3f3ab53dc09497b426a0d03f3ecc2323bbd0b154.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_9e32aef85b604adf64c5527a35ed8c7520a2e7cc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_fae95816ecd7ca6d3d678908bdc6232e0bd5fd04.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_73814366392709bd9e311b40730993bb058499cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_fd1d60a7b8804fbc4d64d0b25bcb560eb9fd20d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8a6ed980c74ad35b2dfc4e1daf97bfc0eea5d7c9">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.github.dmytrodanylyk.circular-progress-button-library-1.1.3_dc080dee9a55b218a5b8c7cedb7b23d11ccaa411.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_a9684115864a69ef49934b1a1e0b303194a9495b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_f6b154292abe004b10a19209e10ca1629529c93d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_0ddb2c65e6cfbe91a294143d7abb3626041cdfb6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_be65a128bcd84dbdebc9ece8900450a4a9cfc0d9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_565f7d2e7ff1e27e7d1a07f17e0bc6a0c67c061b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3e4a9a16e8a696c2befe13686672ca28c96a7447">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/instant-run_9f809fe05bcdf775833420bfe7abfa82c6c2b014.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_95191dc95c790f926eee0fea9084e133eabf3a2d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_6fdbab433f72688811c8e406b8b3ddba0be4deac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_c47f5c05ba790e4dccb271ced8737aae33186b6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.2.1_4a3377f3a33ee6bcbd3adcd99046d9cfe873245d.jar" />
+    </item>
+
+</items>

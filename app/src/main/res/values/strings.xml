@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Split It</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="Complete">Complete</string>
+    <string name="Error">Error</string>
+    <string name="Split">Split</string>
+    <color name="white">#FFFFFF</color>
+</resources>
