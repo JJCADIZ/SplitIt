@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="4b5ef45e7fdea59d1e5b0fd555e947d286259b6c">
+        sha1="d4f29aeb11220da91087051d475538d347691693">
         <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_235e5009e536c7e5e93481ee6035ac562713a792.jar" />
     </item>
     <item
@@ -93,6 +93,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.robinhood.ticker/ticker/1.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f6ac7e239de08374cc3bbed5d2fb314952ae98f4">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.robinhood.ticker-ticker-1.1.0_857498cf01338dc816d81c53ff92dacebd2c33e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -142,7 +151,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="3e4a9a16e8a696c2befe13686672ca28c96a7447">
+        sha1="9466b9355bba2a3e64c1c93bd41a9345bf5a98e9">
         <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/instant-run_9f809fe05bcdf775833420bfe7abfa82c6c2b014.jar" />
     </item>
     <item
@@ -156,21 +165,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_6fdbab433f72688811c8e406b8b3ddba0be4deac.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
         <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_c47f5c05ba790e4dccb271ced8737aae33186b6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/jjcadiz/AndroidStudioProjects/SplitIt/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_6fdbab433f72688811c8e406b8b3ddba0be4deac.jar" />
     </item>
     <item
         is-multidex="false"

@@ -9,23 +9,37 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/cpb_green_dark"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.jjcadiz.splitit.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <com.dd.CircularProgressButton
-        android:id="@+id/btnWithText"
-        android:layout_width="196dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="82dp"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:background="@drawable/circular_button_border"
-        app:cpb_textComplete="@string/Complete"
-        app:cpb_textError="@string/Error"
-        app:cpb_textIdle="@string/Split"
-        app:cpb_cornerRadius="48dp"
+    <com.robinhood.ticker.TickerView
+        android:id="@+id/ticker_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textAppearance="@style/TickerTextAppearance"
+        app:ticker_animationDuration="1500"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Total Bill"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:textAppearance="@style/TickerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_total"
+        android:layout_weight="0.17"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/ticker_bill"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>
