@@ -1,5 +1,7 @@
 package com.example.jjcadiz.splitit;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -12,13 +14,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.dd.CircularProgressButton;
 import com.robinhood.ticker.TickerUtils;
 import com.robinhood.ticker.TickerView;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
 public class SplitActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+float Total = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +48,9 @@ public class SplitActivity extends AppCompatActivity
         tickerCes.setText("$0");
 
         //EDIT TEXT
-        EditText edtBill = (EditText) findViewById(R.id.et_bill);
+        final EditText edtBill = (EditText) findViewById(R.id.et_bill);
+
+
 
         //CIRCULAR BUTTON
         final CircularProgressButton SplitButton = (CircularProgressButton) findViewById(R.id.btnSplit);
@@ -48,13 +59,54 @@ public class SplitActivity extends AppCompatActivity
             @Override
             public void onClick(View v){
                 SplitButton.setProgress(100);
-                tickerCes.setText("$100");
-                tickerMon.setText("$100");
+                if (edtBill.getText().toString().length() == 0){
+                    Toast.makeText(getApplicationContext(), "EMPTY FIELD",
+                            Toast.LENGTH_LONG).show();
+                }else{
+                    Compute();
+                }
+
+
                 }
             }
         );
 
+
+
     }
+
+    public void Compute(){
+
+        //SHARED PREFERENCE
+        SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
+
+        //CES TICKER
+        final TickerView tickerCes = (TickerView) findViewById(R.id.tickerCes);
+        tickerCes.setCharacterList(TickerUtils.getDefaultNumberList());
+        tickerCes.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
+
+        //MON TICKER
+        final TickerView tickerMon = (TickerView) findViewById(R.id.tickerMon);
+        tickerMon.setCharacterList(TickerUtils.getDefaultNumberList());
+        tickerMon.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
+
+        EditText edtBill = (EditText) findViewById(R.id.et_bill);
+        float Bill = Float.parseFloat(edtBill.getText().toString());
+        float SplitBill;
+
+        SplitBill = (Bill/2);
+
+        tickerCes.setText("$".concat(String.valueOf(SplitBill)));
+        tickerMon.setText("$".concat(String.valueOf(SplitBill)));
+
+        //Set Shared Preferences
+        SharedPreferences.Editor editor = getSharedPreferences("Bill", MODE_PRIVATE).edit();
+        editor.putFloat("Bill",Bill);
+        editor.apply();
+
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -2,6 +2,7 @@ package com.example.jjcadiz.splitit;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.content.SharedPreferences;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -12,20 +13,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.robinhood.ticker.TickerUtils;
 import com.robinhood.ticker.TickerView;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+float Total = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         //FAB ICON
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -38,11 +43,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        //TICKER
-        final TickerView tickerView = (TickerView) findViewById(R.id.ticker_bill);
-        tickerView.setCharacterList(TickerUtils.getDefaultNumberList());
-        tickerView.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
-        tickerView.setText("$0");
+        onCreateValidate();
 
 
         //LAYOUT
@@ -61,8 +62,53 @@ public class MainActivity extends AppCompatActivity
     public void StartSplit (View view){
         Intent split = new Intent(this, SplitActivity.class);
         startActivity(split);
+    }
+
+    public void DisplayBill(){
+
+        SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
+        float Total2 = Billing.getFloat("Bill", 0);
+        Total += Total2;
+        Toast.makeText(getApplicationContext(), String.valueOf(Total),
+                Toast.LENGTH_LONG).show();
+        final TickerView tickerView = (TickerView) findViewById(R.id.ticker_bill);
+        tickerView.setCharacterList(TickerUtils.getDefaultNumberList());
+        tickerView.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
+
+        tickerView.setText("$".concat(String.valueOf(Total)));
+    }
+
+    public void DisplayZero(){
+        final TickerView tickerView = (TickerView) findViewById(R.id.ticker_bill);
+        tickerView.setCharacterList(TickerUtils.getDefaultNumberList());
+        tickerView.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
+
+        tickerView.setText("$0");
+    }
+
+    public void onCreateValidate(){
+        SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
+        float Total = Billing.getFloat("Bill", 0);
+        if(String.valueOf(Total).length() == 0){
+            DisplayZero();
+        }else{
+            DisplayBill();
+        }
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
+        float Total = Billing.getFloat("Bill", 0);
+        if(String.valueOf(Total).length() == 0){
+
+        }else{
+            DisplayBill();
+        }
 
     }
+
 
     @Override
     public void onBackPressed() {
@@ -103,8 +149,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            Intent intent = new Intent(getBaseContext(), SplitActivity.class);
-            startActivity(intent);
+
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
