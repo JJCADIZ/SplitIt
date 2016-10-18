@@ -26,6 +26,32 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <com.robinhood.ticker.TickerView
+        android:id="@+id/tickerCes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textAppearance="@style/TickerTextAppearance"
+        app:ticker_animationDuration="1500"
+        android:layout_below="@+id/tv_total"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="23dp"
+        android:layout_toRightOf="@+id/tv_ces"
+        android:layout_toEndOf="@+id/tv_ces" />
+
+    <TextView
+        android:text="CES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_ces"
+        android:textAppearance="@style/NameStyle"
+        android:layout_alignBottom="@+id/tickerCes"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="31dp" />
+
     <TextView
         android:text="Total Bill"
         android:paddingTop="10dp"
@@ -36,8 +62,33 @@
         android:layout_height="wrap_content"
         android:id="@+id/tv_total"
         android:layout_weight="0.17"
-        android:layout_marginTop="23dp"
         android:layout_below="@+id/ticker_bill"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <com.robinhood.ticker.TickerView
+        android:id="@+id/tickerMon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textAppearance="@style/TickerTextAppearance"
+        app:ticker_animationDuration="1500"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tickerCes"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/tickerCes"
+        android:layout_alignStart="@+id/tickerCes" />
+
+    <TextView
+        android:text="MON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_mon"
+        android:textAppearance="@style/NameStyle"
+        android:layout_marginBottom="28dp"
+        android:layout_alignBottom="@+id/tickerMon"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

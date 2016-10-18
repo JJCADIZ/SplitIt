@@ -18,18 +18,19 @@ import android.widget.Toast;
 import com.robinhood.ticker.TickerUtils;
 import com.robinhood.ticker.TickerView;
 
-import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-float Total = 0;
+ float Total = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
 
         //FAB ICON
@@ -43,7 +44,8 @@ float Total = 0;
             }
         });
 
-        onCreateValidate();
+        //onCreateValidate();
+        DisplayBill();
 
 
         //LAYOUT
@@ -67,15 +69,31 @@ float Total = 0;
     public void DisplayBill(){
 
         SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
+        SharedPreferences.Editor editor = getSharedPreferences("Bill", MODE_PRIVATE).edit();
         float Total2 = Billing.getFloat("Bill", 0);
-        Total += Total2;
-        Toast.makeText(getApplicationContext(), String.valueOf(Total),
-                Toast.LENGTH_LONG).show();
+        editor.clear();
+        editor.commit();
+        float TotalSplit = 0;
+        Total = Total + Total2;
+        TotalSplit = Total/2;
+
         final TickerView tickerView = (TickerView) findViewById(R.id.ticker_bill);
         tickerView.setCharacterList(TickerUtils.getDefaultNumberList());
         tickerView.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
 
+        final TickerView tickerMon = (TickerView) findViewById(R.id.tickerMon);
+        tickerMon.setCharacterList(TickerUtils.getDefaultNumberList());
+        tickerMon.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
+
+
+        final TickerView tickerCes = (TickerView) findViewById(R.id.tickerCes);
+        tickerCes.setCharacterList(TickerUtils.getDefaultNumberList());
+        tickerCes.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
+
+
         tickerView.setText("$".concat(String.valueOf(Total)));
+        tickerCes.setText("$".concat(String.valueOf(TotalSplit)));
+        tickerMon.setText("$".concat(String.valueOf(TotalSplit)));
     }
 
     public void DisplayZero(){
@@ -86,29 +104,24 @@ float Total = 0;
         tickerView.setText("$0");
     }
 
-    public void onCreateValidate(){
-        SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
-        float Total = Billing.getFloat("Bill", 0);
-        if(String.valueOf(Total).length() == 0){
-            DisplayZero();
-        }else{
-            DisplayBill();
-        }
-    }
 
     @Override
     public void onResume(){
         super.onResume();
         SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
-        float Total = Billing.getFloat("Bill", 0);
-        if(String.valueOf(Total).length() == 0){
-
+        float Total2 = Billing.getFloat("Bill", 0);
+        if(String.valueOf(Total2).length() == 0){
+            Toast.makeText(getApplicationContext(),"NONE",Toast.LENGTH_SHORT).show();
         }else{
             DisplayBill();
         }
 
     }
 
+    @Override
+    public void onDestroy(){
+
+    }
 
     @Override
     public void onBackPressed() {
