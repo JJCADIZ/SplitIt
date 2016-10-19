@@ -65,7 +65,7 @@ public class SplitActivity extends AppCompatActivity {
 
     }
 
-    /*
+    
     @Override
     public void onBackPressed(){
         final EditText edtBill = (EditText) findViewById(R.id.et_bill);
@@ -75,11 +75,13 @@ public class SplitActivity extends AppCompatActivity {
 
             editor.putFloat("Bill", 0);
             editor.apply();
+            super.onBackPressed();
         }else{
             PassBill();
+            super.onBackPressed();
         }
     }
-    */
+    
 
 
 
