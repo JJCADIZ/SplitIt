@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity
     public void DisplayBill(){
 
         SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
-        SharedPreferences.Editor editor = getSharedPreferences("Bill", MODE_PRIVATE).edit();
+        //SharedPreferences.Editor editor = getSharedPreferences("Bill", MODE_PRIVATE).edit();
         float Total2 = Billing.getFloat("Bill", 0);
-        editor.clear();
-        editor.commit();
+        //editor.clear();
+        //editor.commit();
         float TotalSplit = 0;
         Total = Total + Total2;
         TotalSplit = Total/2;
