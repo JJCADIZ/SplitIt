@@ -23,6 +23,7 @@ import com.robinhood.ticker.TickerView;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
  float Total = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,9 +45,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        //onCreateValidate();
         DisplayBill();
-
 
         //LAYOUT
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -59,11 +58,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-    }
-
-    public void StartSplit (View view){
-        Intent split = new Intent(this, SplitActivity.class);
-        startActivity(split);
     }
 
     public void DisplayBill(){
@@ -103,15 +97,6 @@ public class MainActivity extends AppCompatActivity
         tickerCes.setText("$".concat(String.valueOf(TotalSplit)));
         tickerMon.setText("$".concat(String.valueOf(TotalSplit)));
     }
-
-    public void DisplayZero(){
-        final TickerView tickerView = (TickerView) findViewById(R.id.ticker_bill);
-        tickerView.setCharacterList(TickerUtils.getDefaultNumberList());
-        tickerView.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
-
-        tickerView.setText("$0");
-    }
-
 
 
     @Override
