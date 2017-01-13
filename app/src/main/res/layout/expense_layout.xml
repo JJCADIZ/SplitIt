@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+            <TextView
+                android:text="Expense History"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="466dp"
+                android:id="@+id/expenses"
+                android:paddingTop="5dp"/>
+        </LinearLayout>

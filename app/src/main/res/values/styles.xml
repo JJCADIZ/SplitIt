@@ -19,7 +19,7 @@
 
     <style name="TickerTextAppearance">
         <item name="android:textColor">#ffffff</item>
-        <item name="android:textSize">70sp</item>
+        <item name="android:textSize">50sp</item>
     </style>
 
     <style name="NameStyle">

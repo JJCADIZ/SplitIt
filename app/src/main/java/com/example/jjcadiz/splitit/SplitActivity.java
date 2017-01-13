@@ -35,14 +35,15 @@ public class SplitActivity extends AppCompatActivity {
         SplitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                SplitButton.setProgress(100);
                 if (edtBill.getText().toString().length() == 0){
                     Toast.makeText(getApplicationContext(), "EMPTY FIELD",
                             Toast.LENGTH_LONG).show();
                 }else{
                     PassBill();
+                    SplitButton.setProgress(100);
                     Toast.makeText(getApplicationContext(), "Bill Splitted, go Back"
                             , Toast.LENGTH_SHORT).show();
+
                 }
 
 
@@ -56,7 +57,7 @@ public class SplitActivity extends AppCompatActivity {
 
     public void PassBill(){
         final EditText edtBill = (EditText) findViewById(R.id.et_bill);
-        SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
+        //SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
         SharedPreferences.Editor editor = getSharedPreferences("Bill", MODE_PRIVATE).edit();
 
         float Bill = Float.parseFloat(edtBill.getText().toString());
@@ -68,17 +69,18 @@ public class SplitActivity extends AppCompatActivity {
     
     @Override
     public void onBackPressed(){
+        super.onBackPressed();
         final EditText edtBill = (EditText) findViewById(R.id.et_bill);
         if(edtBill.getText().length() == 0){
             SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
             SharedPreferences.Editor editor = getSharedPreferences("Bill", MODE_PRIVATE).edit();
-
             editor.putFloat("Bill", 0);
             editor.apply();
-            super.onBackPressed();
+
+
         }else{
-            PassBill();
             super.onBackPressed();
+            PassBill();
         }
     }
     

@@ -68,14 +68,22 @@ public class MainActivity extends AppCompatActivity
 
     public void DisplayBill(){
 
+        SharedPreferences All = getApplicationContext().getSharedPreferences("Total", MODE_PRIVATE);
+        Total = All.getFloat("Total",0);
+
         SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
-        //SharedPreferences.Editor editor = getSharedPreferences("Bill", MODE_PRIVATE).edit();
+        SharedPreferences.Editor editor = getSharedPreferences("Bill", MODE_PRIVATE).edit();
         float Total2 = Billing.getFloat("Bill", 0);
-        //editor.clear();
-        //editor.commit();
+        editor.clear();
+        editor.commit();
         float TotalSplit = 0;
         Total = Total + Total2;
         TotalSplit = Total/2;
+
+        SharedPreferences.Editor display = getSharedPreferences("Total", MODE_PRIVATE).edit();
+
+        display.putFloat("Total", Total);
+        display.apply();
 
         final TickerView tickerView = (TickerView) findViewById(R.id.ticker_bill);
         tickerView.setCharacterList(TickerUtils.getDefaultNumberList());
@@ -105,16 +113,11 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+
     @Override
     public void onResume(){
         super.onResume();
-        SharedPreferences Billing = getApplicationContext().getSharedPreferences("Bill", MODE_PRIVATE);
-        float Total2 = Billing.getFloat("Bill", 0);
-        if(String.valueOf(Total2).length() == 0){
-            Toast.makeText(getApplicationContext(),"NONE",Toast.LENGTH_SHORT).show();
-        }else{
-            DisplayBill();
-        }
+        DisplayBill();
 
     }
 
@@ -162,19 +165,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Intent history =new Intent(this, ExpenseActivity.class);
+            startActivity(history);
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

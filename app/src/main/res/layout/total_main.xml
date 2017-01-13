@@ -15,7 +15,7 @@
         android:gravity="center"
         android:layout_height="64dp"
         android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="27sp"
         android:background="@drawable/circular_button_border"
         app:cpb_textComplete="@string/Complete"
         app:cpb_textError="@string/Error"
